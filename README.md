@@ -28,7 +28,7 @@ Winning percentage (or win-loss percentage) is a fraction of games a team has wo
 
 **`confplot`** creates a winning percentage bar chart for NBA teams in a chosen conference ('eastern' or 'western') and year (from 1977 to 2020).
 
-```{r}
+```r
 confplot(conference, year)
 ```
 
@@ -36,7 +36,7 @@ confplot(conference, year)
 
 **`divplot`** creates winning percentage boxplot for NBA teams in a chosen division and selected timespan (between 2005 and 2020).
 
-```{r}
+```r
 divplot(division, first.year, last.year)
 ```
 
@@ -46,7 +46,7 @@ NBA consists of six divisions, three in Eastern Conference ('atlantic', 'central
 
 **`confdf`** allows to create a data frame of NBA teams and their winning percentage, from a specific conference and year
 
-```{r}
+```r
 confdf(conference, year)
 df.west_2007 <- confdf('western', 2007)
 df.east_1999 <- confdf('eastern', 1999)
