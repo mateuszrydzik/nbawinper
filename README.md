@@ -6,7 +6,7 @@ The **nbawinper** package allows to automatically download data from [Basketball
 
 **Remotes** package is required to install the **nbawinper** package
 
-```{r}
+```r
 #install.packages("remotes")
 remotes::install_github("mateuszrydzik/nbawinper")
 library(nbawinper)
