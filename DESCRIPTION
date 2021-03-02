@@ -1,0 +1,21 @@
+Package: nbawinper
+Title: NBA Winning Percentage Plotter
+Version: 0.1.0
+Authors@R: 
+    person(given = "Mateusz",
+           family = "Rydzik",
+           role = c("aut", "cre"),
+           email = "panmisterek@outlook.com")
+Description: Creates a winning percentage plot for each NBA conference in a chosen season or for a specific division in a defined span of time.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports:
+  rvest,
+  ggplot2,
+  dplyr,
+  stringr,
+  tools,
+  xml2
