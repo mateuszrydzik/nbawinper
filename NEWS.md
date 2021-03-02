@@ -1,3 +1,3 @@
-# nbawinper 0.1.0
+# nbawinper 0.1.0 (2021-03-02)
 
-* Added a `NEWS.md` file to track changes to the package.
+* Project published on GitHub
