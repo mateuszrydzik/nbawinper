@@ -34,6 +34,7 @@ confplot(conference, year)
 
 ## ![](img/confplot.png)divplot
 
+
 **`divplot`** creates winning percentage boxplot for NBA teams in a chosen division and selected timespan (between 2005 and 2020).
 
 ``` r
@@ -43,6 +44,7 @@ divplot(division, first.year, last.year)
 NBA consists of six divisions, three in Eastern Conference ('atlantic', 'central', 'southeast') and three in Western Conference ('northwest', 'pacific', 'southwest').
 
 ![](img/divplot.png)
+
 
 ## confdf
 
