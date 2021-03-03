@@ -1,6 +1,6 @@
 Package: nbawinper
 Title: NBA Winning Percentage Plotter
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     person(given = "Mateusz",
            family = "Rydzik",
