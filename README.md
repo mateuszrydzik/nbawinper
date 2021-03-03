@@ -4,7 +4,7 @@ The **nbawinper** package allows to automatically download data from [Basketball
 
 ## Installation
 
-**Remotes** package is required to install the **nbawinper** package
+**remotes** package is required to install the **nbawinper** package.
 
 ``` r
 #install.packages("remotes")
