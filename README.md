@@ -32,9 +32,9 @@ Winning percentage (or win-loss percentage) is a fraction of games a team has wo
 confplot(conference, year)
 ```
 
-## ![](img/confplot.png)divplot
+## ![](img/confplot.png)
 
-
+## divplot
 **`divplot`** creates winning percentage boxplot for NBA teams in a chosen division and selected timespan (between 2005 and 2020).
 
 ``` r
