@@ -14,7 +14,7 @@ library(nbawinper)
 
 ## What is a winning percentage?
 
-Winning percentage (or win-loss percentage) is a fraction of games a team has won. It is defined as wins divided by the total number of matches played. As some seasons do not end with the expected number of games played, the winning percentage is a more accurate indicator of team's progress, rather than amount of games won.
+Winning percentage (or win-loss percentage) is a fraction of games a team has won. It is defined as wins divided by the total number of matches played. As some seasons do not end with the expected number of games played, the winning percentage is a more accurate indicator of team's progress, rather than amount of won games.
 
 ## Functions
 
