@@ -10,45 +10,53 @@
 #' divplot('southwest', 2014, 2018)
 #' divplot('central', 2009, 2012)
 
-divplot <- function(division, first.year, last.year) {
+divplot <- function(division, first.year, last.year){
 
-  if (first.year < 2005 || last.year > 2020){
+  if (first.year < 2005 || last.year > 2020)
 
-    stop('Please select a timespan between 2005 and 2020')
+  {
+    stop('Please select a timespan between 2005 and 2020.')
   }
 
-  else {
+  else
 
+  {
     years <- first.year:last.year
     dataframe <- data.frame()
     div_west <- c('northwest', 'pacific', 'southwest')
     div_east <- c('atlantic', 'central', 'southeast')
 
-    for (i in years){
+    for (i in years)
 
+    {
       web <- paste("https://www.basketball-reference.com/leagues/NBA_",i,".html", sep="")
       page <- xml2::read_html(web)
 
-      if (is.element(division, div_west)){
 
+      if (is.element(division, div_west))
+
+      {
         tabw <- rvest::html_node(page, xpath = '//*[@id="divs_standings_W"]')
         tab <- rvest::html_table(tabw, fill = T)
         tab <- dplyr::select(tab, Team = 'Western Conference', WinPer = 'W/L%')
         tab['Year'] <- i
         tab$Team <-  stringr::str_replace(tab$Team, "\\*", "")
 
-        if (division == 'northwest'){
+        if (division == 'northwest')
 
+        {
           tab <- tab[2:6,]
         }
 
-        else if (division == 'pacific'){
+        else if (division == 'pacific')
 
+        {
           tab <- tab[8:12,]
         }
 
-        else if (division == 'southwest'){
+        else if (division == 'southwest')
 
+        {
           tab <- tab[14:18,]
         }
 
@@ -59,26 +67,30 @@ divplot <- function(division, first.year, last.year) {
         dataframe <- dplyr::bind_rows(tab, dataframe)
       }
 
-      else if (is.element(division, div_east)){
+      else if (is.element(division, div_east))
 
+      {
         tabw <- rvest::html_node(page, xpath = '//*[@id="divs_standings_E"]')
         tab <- rvest::html_table(tabw, fill = T)
         tab <- dplyr::select(tab, Team = 'Eastern Conference', WinPer = 'W/L%')
         tab['Year'] <- i
         tab$Team <- stringr::str_replace(tab$Team, "\\*", "")
 
-        if (division == 'atlantic'){
+        if (division == 'atlantic')
 
+        {
           tab <- tab[2:6,]
         }
 
-        else if (division == 'central'){
+        else if (division == 'central')
 
+        {
           tab <- tab[8:12,]
         }
 
-        else if (division == 'southeast'){
+        else if (division == 'southeast')
 
+        {
           tab <- tab[14:18,]
         }
 
