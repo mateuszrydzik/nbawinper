@@ -26,7 +26,7 @@ Winning percentage (or win-loss percentage) is a fraction of games a team has wo
 
 ## confplot
 
-**`confplot`** creates a winning percentage bar chart for NBA teams in a chosen conference ('eastern' or 'western') and year (from 1977 to 2020).
+**`confplot`** creates a winning percentage bar chart for NBA teams in a chosen conference ('eastern' or 'western') and year (from 1971).
 
 ``` r
 confplot(conference, year)
@@ -58,4 +58,4 @@ df.east_1999 <- confdf('eastern', 1999)
 
 ## Support
 
-This is my first ever written package, so I would appreciate any feedback, either through my email (panmisterek\@outlook.com) or through GitHub.
+This is my first ever written package, so I would appreciate any feedback, either through my email (matrydzik@gmail.com) or through GitHub.

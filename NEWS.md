@@ -1,3 +1,7 @@
+# nbawinper 0.1.3 (2023-11-05)
+
+* confplot and confdf now accept seasons from 1971 to the most recent season
+
 # nbawinper 0.1.2 (2021-03-04)
 
 * confplot and confdf now check if the given conference is valid

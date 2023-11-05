@@ -12,13 +12,15 @@ confplot(conference, year)
 }}
 
 \item{year}{\itemize{
-\item numeric value, a year in which the desired season has ended (e.g. year = 2008 will provide
-a graph for a 2007-2008 season, year = 2017 for 2016-17 etc.). Please note, that the function only accepts
-years in between 1977 and 2020.
+\item numeric value, a year in which the desired season has ended
+(e.g. year = 2008 will provide a graph for a 2007-2008 season,
+year = 2017 for 2016-17 etc.).
+Please note, that the function only accept years fr0m 1970.
 }}
 }
 \description{
-Creates a winning percentage bar chart for NBA teams in a chosen conference and year (from 1977 to 2020)
+Creates a winning percentage bar chart for NBA teams
+in a chosen conference and year (from 1977 to 2020)
 }
 \examples{
 confplot('eastern', 2007)

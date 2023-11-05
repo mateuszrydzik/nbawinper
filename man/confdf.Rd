@@ -12,13 +12,16 @@ confdf(conference, year)
 }}
 
 \item{year}{\itemize{
-\item numeric value, a year in which the desired season has ended (e.g. year = 2008 will provide
-a data frame for 2007-2008 season, year = 2017 for 2016-17 etc.). Please note, that the function only accepts
-years in between 1977 and 2020.
+\item numeric value, a year in which the desired
+season has ended (e.g. year = 2008 will provide
+a data frame for 2007-2008 season, year = 2017 for 2016-17 etc.).
+Please note, that the function only accepts
+years from 1970.
 }}
 }
 \description{
-Allows to create a data frame of NBA teams from a chosen conference, with their winning percentage
+Allows to create a data frame of NBA teams from
+a chosen conference, with their winning percentage
 }
 \examples{
 df.west_2007 <- confdf('western', 2007)
