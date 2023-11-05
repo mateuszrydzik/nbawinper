@@ -13,6 +13,6 @@
 #' df.east_1999 <- confdf('eastern', 1999)
 
 confdf <- function(conference, year) {
-  tab <- get_br_data(conference, year)
+  tab <- get_br_season_data(conference, year)
   return(tab)
 }

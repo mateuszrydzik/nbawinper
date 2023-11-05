@@ -1,6 +1,6 @@
 library(dplyr)
 
-get_br_data <- function(conference, year) {
+get_br_season_data <- function(conference, year) {
   if (year < 1971) {
     stop("Please select a year after 1970")
     }
@@ -46,4 +46,22 @@ get_br_data <- function(conference, year) {
     mutate(team = stringr::str_replace(team, "\\*", ""))
 
   return(tab)
+}
+
+
+get_br_team_data <- function(team, year = 0) {
+    web <- paste0("https://www.basketball-reference.com/teams/", team)
+    print(web)
+    page <- xml2::read_html(web)
+    tabw <- rvest::html_element(page, xpath = paste0("//*[@id='", team, "']"))
+    tab <-  rvest::html_table(tabw, fill = TRUE)
+    tab <- dplyr::select(tab, season = "Season", team = "Team", winper = "W/L%")
+    tab <- tab %>%
+      mutate(playoffs = stringr::str_detect(team, "\\*")) %>%
+      mutate(team = stringr::str_replace(team, "\\*", ""))
+    if (year != 0) {
+      selected_row <- 2024 - year + 1
+      tab <- tab[selected_row, ]
+    }
+    return(tab)
 }
