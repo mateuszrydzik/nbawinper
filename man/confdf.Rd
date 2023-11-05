@@ -24,6 +24,6 @@ Allows to create a data frame of NBA teams from
 a chosen conference, with their winning percentage
 }
 \examples{
-df.west_2007 <- confdf('western', 2007)
-df.east_1999 <- confdf('eastern', 1999)
+confdf('western', 2007)
+confdf('eastern', 1999)
 }

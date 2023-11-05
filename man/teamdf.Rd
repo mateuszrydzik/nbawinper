@@ -23,5 +23,5 @@ Allows to create a data frame for specific NBA team,
 with their winning percentage
 }
 \examples{
-spurs_2005 <- teamdf('SAS', 2005)
+teamdf('SAS', 2005)
 }

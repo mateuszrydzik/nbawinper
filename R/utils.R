@@ -37,8 +37,8 @@ get_br_season_data <- function(conference, year) {
   # tables before 2016 have different structure
   if (year < 2016) {
     tab <- tab[grepl("\\.", tab$winper), ]
-    tab$winper <- as.numeric(tab$winper)
-    tab <- tab[complete.cases(tab$winper), ]
+    tab$winper <- base::as.numeric(tab$winper)
+    tab <- tab[stats::complete.cases(tab$winper), ]
     tab <- dplyr::arrange(tab, desc(winper))
   }
 

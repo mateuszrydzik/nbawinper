@@ -9,8 +9,8 @@
 #' years from 1970.
 #' @export
 #' @examples
-#' df.west_2007 <- confdf('western', 2007)
-#' df.east_1999 <- confdf('eastern', 1999)
+#' confdf('western', 2007)
+#' confdf('eastern', 1999)
 
 confdf <- function(conference, year) {
   tab <- get_br_season_data(conference, year)

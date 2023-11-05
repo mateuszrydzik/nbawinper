@@ -8,7 +8,7 @@
 #' a data frame for 2007-2008 season, year = 2017 for 2016-17 etc.).
 #' @export
 #' @examples
-#' spurs_2005 <- teamdf('SAS', 2005)
+#' teamdf('SAS', 2005)
 
 teamdf <- function(team, year = 0) {
     tab <- get_br_team_data(team, year)
