@@ -1,4 +1,7 @@
 # nbawinper
+  <!-- badges: start -->
+  [![R-CMD-check](https://github.com/mateuszrydzik/nbawinper/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/mateuszrydzik/nbawinper/actions/workflows/R-CMD-check.yaml)
+  <!-- badges: end -->
 
 The **nbawinper** package allows to automatically download data from [Basketball Reference](https://www.basketball-reference.com) about NBA teams winning percentage and create bar charts, boxplots and data frames with it.
 

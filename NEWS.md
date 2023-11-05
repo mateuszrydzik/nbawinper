@@ -1,4 +1,8 @@
-# nbawinper 0.1.3 (2023-11-05)
+# nbawinper 0.2.1 (2023-11-05)
+
+* new function: teamdf
+
+# nbawinper 0.2.0 (2023-11-05)
 
 * confplot and confdf now accept seasons from 1971 to the most recent season
 
