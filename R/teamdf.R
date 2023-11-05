@@ -7,6 +7,7 @@
 #' season has ended (e.g. year = 2008 will provide
 #' a data frame for 2007-2008 season, year = 2017 for 2016-17 etc.).
 #' @export
+#' @importFrom rlang .data
 #' @examples
 #' teamdf('SAS', 2005)
 

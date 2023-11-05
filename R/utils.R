@@ -39,12 +39,12 @@ get_br_season_data <- function(conference, year) {
     tab <- tab[grepl("\\.", tab$winper), ]
     tab$winper <- base::as.numeric(tab$winper)
     tab <- tab[stats::complete.cases(tab$winper), ]
-    tab <- dplyr::arrange(tab, desc(winper))
+    tab <- dplyr::arrange(tab, dplyr::desc(.data$winper))
   }
 
   tab <- tab %>%
-    dplyr::mutate(playoffs = stringr::str_detect(team, "\\*")) %>%
-    dplyr::mutate(team = stringr::str_replace(team, "\\*", ""))
+    dplyr::mutate(playoffs = stringr::str_detect(.data$team, "\\*")) %>%
+    dplyr::mutate(team = stringr::str_replace(.data$team, "\\*", ""))
 
   return(tab)
 }

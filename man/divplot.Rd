@@ -4,24 +4,27 @@
 \alias{divplot}
 \title{NBA Divisions Winning Percentage Plotter}
 \usage{
-divplot(division, first.year, last.year)
+divplot(division, first_year, last_year)
 }
 \arguments{
 \item{division}{\itemize{
-\item character value, 'northwest', 'pacific', 'southwest' for the Western Conference,
-and 'atlantic', 'central', 'southeast' for the Eastern Conference
+\item character value, 'northwest', 'pacific', 'southwest'
+for the Western Conference, and 'atlantic', 'central', 'southeast'
+for the Eastern Conference
 }}
 
-\item{first.year}{\itemize{
-\item first year, from which the data will be presented on the graph
+\item{first_year}{\itemize{
+\item first year, from which the data will be
+presented on the graph
 }}
 
-\item{last.year}{\itemize{
+\item{last_year}{\itemize{
 \item last year, that closes the selected timespan
 }}
 }
 \description{
-Creates a winning percentage boxplot for NBA teams in a chosen division and selected timespan
+Creates a winning percentage boxplot for NBA teams
+in a chosen division and selected timespan
 (between 2005 and 2020)
 }
 \examples{
