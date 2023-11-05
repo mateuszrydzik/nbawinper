@@ -36,14 +36,15 @@ get_br_season_data <- function(conference, year) {
 
   # tables before 2016 have different structure
   if (year < 2016) {
+    tab <- tab[grepl("\\.", tab$winper), ]
     tab$winper <- as.numeric(tab$winper)
     tab <- tab[complete.cases(tab$winper), ]
-    tab <- tab[order(-tab[, 2]), ]
+    tab <- dplyr::arrange(tab, desc(winper))
   }
 
   tab <- tab %>%
-    mutate(playoffs = stringr::str_detect(team, "\\*")) %>%
-    mutate(team = stringr::str_replace(team, "\\*", ""))
+    dplyr::mutate(playoffs = stringr::str_detect(team, "\\*")) %>%
+    dplyr::mutate(team = stringr::str_replace(team, "\\*", ""))
 
   return(tab)
 }
@@ -57,8 +58,8 @@ get_br_team_data <- function(team, year = 0) {
     tab <-  rvest::html_table(tabw, fill = TRUE)
     tab <- dplyr::select(tab, season = "Season", team = "Team", winper = "W/L%")
     tab <- tab %>%
-      mutate(playoffs = stringr::str_detect(team, "\\*")) %>%
-      mutate(team = stringr::str_replace(team, "\\*", ""))
+      dplyr::mutate(playoffs = stringr::str_detect(team, "\\*")) %>%
+      dplyr::mutate(team = stringr::str_replace(team, "\\*", ""))
     if (year != 0) {
       selected_row <- 2024 - year + 1
       tab <- tab[selected_row, ]
